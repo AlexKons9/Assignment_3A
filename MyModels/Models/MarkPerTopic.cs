@@ -7,6 +7,7 @@
         public int MarkOfTopic2 { get; set; }
         public int MarkOfTopic3 { get; set; }
         public int MarkOfTopic4 { get; set; }
+        public int FinalScore { get; set; }
 
     }
 }

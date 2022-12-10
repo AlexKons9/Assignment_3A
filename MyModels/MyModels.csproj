@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8E75F3F2-306C-4277-A32B-52FDFBA4092C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>MyModels</RootNamespace>
     <AssemblyName>MyModels</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -44,14 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\AssessmentTestResult.cs" />
     <Compile Include="Models\Candidate.cs" />
     <Compile Include="Models\Certificate.cs" />
     <Compile Include="Models\Exam.cs" />
     <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\MarkPerTopic.cs" />
     <Compile Include="Models\PhotoIdType.cs" />
-    <Compile Include="Models\TypeOfCertificate.cs" />
+    <Compile Include="Models\CertificateType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,0 +1,16 @@
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\obj\Debug\EFCodeFirstAdminStudent.csproj.AssemblyReference.cache
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\obj\Debug\EFCodeFirstAdminStudent.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\obj\Debug\EFCodeFirstAdminStudent.csproj.CoreCompileInputs.cache
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\bin\Debug\EFCodeFirstAdminStudent.exe.config
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\bin\Debug\EFCodeFirstAdminStudent.exe
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\bin\Debug\EFCodeFirstAdminStudent.pdb
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\bin\Debug\EntityFramework.dll
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\bin\Debug\MyModels.dll
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\bin\Debug\MyModels.pdb
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\bin\Debug\MyModels.dll.config
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\bin\Debug\EntityFramework.xml
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\obj\Debug\EFCodeFirstAdminStudent.csproj.CopyComplete
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\obj\Debug\EFCodeFirstAdminStudent.exe
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\obj\Debug\EFCodeFirstAdminStudent.pdb

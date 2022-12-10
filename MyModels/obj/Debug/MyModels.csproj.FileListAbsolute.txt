@@ -1,0 +1,7 @@
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\MyModels\obj\Debug\MyModels.csproj.AssemblyReference.cache
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\MyModels\obj\Debug\MyModels.csproj.CoreCompileInputs.cache
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\MyModels\bin\Debug\MyModels.dll.config
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\MyModels\bin\Debug\MyModels.dll
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\MyModels\bin\Debug\MyModels.pdb
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\MyModels\obj\Debug\MyModels.dll
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\MyModels\obj\Debug\MyModels.pdb

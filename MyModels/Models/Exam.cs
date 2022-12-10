@@ -7,12 +7,25 @@ using System.Threading.Tasks;
 
 namespace MyModels.Models
 {
-    internal class Exam
+    public class Exam
     {
         [Key]
         public int ExamsId { get; set; }
         public MarkPerTopic MarkPerTopic { get; set; }
-        public int TotalMark { get; set; }
-        public AssessmentTestResult AssessmentTestResult { get; set;}
+        public string AssessmentTestResult 
+        {
+            get { return AssessmentTestResult; }
+            set
+            {
+                if (MarkPerTopic.FinalScore >= 65)
+                {
+                    AssessmentTestResult = "Pass";
+                }
+                else
+                {
+                    AssessmentTestResult = "Fail";
+                }
+            }
+        }
     }
 }

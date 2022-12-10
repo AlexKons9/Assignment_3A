@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace MyModels.Models
 {
-    internal class Certificate
+    public class Certificate
     {
         [Key]
         public int CertificateId { get; set; }
         [Required]
-        public TypeOfCertificate TypeOfCertificate { get; set; }
+        public CertificateType CertificateType { get; set; }
         public Candidate Candidate { get; set; }
         public string AssessmentTestCode { get; set; }
         public DateTime ExaminationDate { get; set; }
         public DateTime ScoreReportDate { get; set; }
         [Required]
-        public int CandidateScore { get; set; }
+        public int CandidateScore { get { return CandidateScore; } set { CandidateScore = Exam.MarkPerTopic.FinalScore; } }
         public int MaximumScore { get; set; }
         public string PercentageScore { get; set; }
         public Exam Exam { get; set; }

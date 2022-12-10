@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyModels.Models
 {
-    internal class Gender
+    public class Gender
     {
         [Key]
         public int GenderId { get; set; }
