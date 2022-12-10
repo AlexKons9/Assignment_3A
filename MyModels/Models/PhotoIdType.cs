@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyModels
+namespace MyModels.Models
 {
-    internal class Program
+    internal class PhotoIdType
     {
-        static void Main(string[] args)
-        {
-
-        }
+        public int Id { get; set; }
+        public string Type { get; set; }
     }
 }
