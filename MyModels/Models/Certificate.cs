@@ -21,7 +21,7 @@ namespace MyModels.Models
         public int CandidateScore { get; set; }
         public int MaximumScore { get; set; }
         public string PercentageScore { get; set; }
-        public AssessmentTestResult AssessmentTestResult { get; set; }
+        public Exam Exam { get; set; }
         public string TopicDescription { get; set; }
         public int NumberOfAwardedMarks { get; set; }
         public int NumberOfPossibleMakrs { get; set; }
