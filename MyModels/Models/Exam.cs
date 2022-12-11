@@ -11,20 +11,32 @@ namespace MyModels.Models
     {
         [Key]
         public int ExamsId { get; set; }
+        public CertificateType CertificateType { get; set; }
+        public Candidate CandidateId { get; set; }
         public MarkPerTopic MarkPerTopic { get; set; }
-        public string AssessmentTestResult 
+        public int FinalScore { get; set; }
+        public string AssessmentTestResult { get; set; }
+
+
+        public Exam()
         {
-            get { return AssessmentTestResult; }
-            set
+
+        }
+
+        public Exam(Candidate candidateId, CertificateType certificateType, MarkPerTopic markPerTopic)
+        {
+            CandidateId = candidateId;
+            CertificateType = certificateType;
+            MarkPerTopic = markPerTopic;
+            FinalScore = markPerTopic.MarkOfTopic1 + markPerTopic.MarkOfTopic2 + 
+                         markPerTopic.MarkOfTopic3 + markPerTopic.MarkOfTopic4;
+            if(FinalScore >= 65)
             {
-                if (MarkPerTopic.FinalScore >= 65)
-                {
-                    AssessmentTestResult = "Pass";
-                }
-                else
-                {
-                    AssessmentTestResult = "Fail";
-                }
+                AssessmentTestResult = "Pass";
+            }
+            else
+            {
+                AssessmentTestResult = "Fail";
             }
         }
     }

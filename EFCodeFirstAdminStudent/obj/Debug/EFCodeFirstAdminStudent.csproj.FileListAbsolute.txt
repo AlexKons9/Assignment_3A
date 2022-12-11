@@ -14,3 +14,5 @@ C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFi
 C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\obj\Debug\EFCodeFirstAdminStudent.csproj.CopyComplete
 C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\obj\Debug\EFCodeFirstAdminStudent.exe
 C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\obj\Debug\EFCodeFirstAdminStudent.pdb
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\obj\Debug\EFCodeFirstAdminStudent.Migrations.InitialCreate.resources
+C:\Users\Alex\OneDrive\Software\assignments\Assignment_3A\Assignment_3A\EFCodeFirstAdminStudent\obj\Debug\EFCodeFirstAdminStudent.csproj.GenerateResource.cache
