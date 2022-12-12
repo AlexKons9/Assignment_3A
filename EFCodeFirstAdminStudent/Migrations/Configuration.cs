@@ -35,12 +35,12 @@
                 // Add Some Candidates
                 AddCandidates();
 
-                // Add Some Certificates
-                AddCertificates();
+                // Add Some Exams And Certificates / A Certificate Is Created Only When the exam is successfull
+                AddExamsAndCertificates();
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.Message);
+                Console.WriteLine(ex.Message);
             }
 
 
@@ -354,7 +354,7 @@
                 }
             }
 
-            void AddCertificates()
+            void AddExamsAndCertificates()
             {
                 try
                 {
@@ -395,6 +395,7 @@
                                 MarkOfTopic3 = 15,
                                 MarkOfTopic4 = 20
                             });
+                        context.Exams.Add(exam2);
 
                         // Succeeded Exam with Certificate
                         var exam3 = new Exam(context.Candidates.Where(c => c.CandidateId == 6).SingleOrDefault(), 
@@ -431,6 +432,7 @@
                                 MarkOfTopic3 = 20,
                                 MarkOfTopic4 = 20
                             });
+                        context.Exams.Add(exam4);
 
                         // Succeeded Exam with Certificate
                         var exam5 = new Exam(context.Candidates.Where(c => c.CandidateId == 6).SingleOrDefault(), 
@@ -458,136 +460,272 @@
                         });
 
 
+                        // Succeeded Exam with Certificate
+                        var exam6 = new Exam(context.Candidates.Where(c => c.CandidateId == 8).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "SDS Foundation").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 20,
+                                MarkOfTopic2 = 20,
+                                MarkOfTopic3 = 30,
+                                MarkOfTopic4 = 22
+                            });
+
+                        context.Certificates.Add(new Certificate
+                        {
+                            CertificateType = exam6.CertificateType,
+                            CandidateId = context.Candidates.Where(c => c.CandidateId == 8).SingleOrDefault(),
+                            AssessmentTestCode = "SDS 456834FND",
+                            ExaminationDate = new DateTime(2018, 03, 11),
+                            ScoreReportDate = new DateTime(2018, 03, 15),
+                            Exam = exam6,
+                            CandidateScore = exam6.FinalScore,
+                            TopicDescription = "SDS Foundation Certificate",
+                            NumberOfAwardedMarks = 1,
+                            NumberOfPossibleMakrs = 0
+                        });
+
+
+                        // Succeeded Exam with Certificate
+                        var exam7 = new Exam(context.Candidates.Where(c => c.CandidateId == 8).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "SDS Advanced").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 20,
+                                MarkOfTopic2 = 15,
+                                MarkOfTopic3 = 30,
+                                MarkOfTopic4 = 22
+                            });
+
+                        context.Certificates.Add(new Certificate
+                        {
+                            CertificateType = exam7.CertificateType,
+                            CandidateId = context.Candidates.Where(c => c.CandidateId == 8).SingleOrDefault(),
+                            AssessmentTestCode = "SDS 338755ADV",
+                            ExaminationDate = new DateTime(2018, 05, 17),
+                            ScoreReportDate = new DateTime(2018, 05, 22),
+                            Exam = exam7,
+                            CandidateScore = exam7.FinalScore,
+                            TopicDescription = "SDS Advanced Certificate",
+                            NumberOfAwardedMarks = 1,
+                            NumberOfPossibleMakrs = 0
+                        });
+
+
+                        // A Failed Exam that did not lead to a Certificate
+                        var exam8 = new Exam(context.Candidates.Where(c => c.CandidateId == 10).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "Python").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 10,
+                                MarkOfTopic2 = 15,
+                                MarkOfTopic3 = 15,
+                                MarkOfTopic4 = 10
+                            });
+                        context.Exams.Add(exam8);
+
+
+                        // Succeeded Exam with Certificate
+                        var exam9 = new Exam(context.Candidates.Where(c => c.CandidateId == 10).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "C#").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 20,
+                                MarkOfTopic2 = 18,
+                                MarkOfTopic3 = 30,
+                                MarkOfTopic4 = 30
+                            });
+
+                        context.Certificates.Add(new Certificate
+                        {
+                            CertificateType = exam9.CertificateType,
+                            CandidateId = context.Candidates.Where(c => c.CandidateId == 10).SingleOrDefault(),
+                            AssessmentTestCode = "CSJ 339022",
+                            ExaminationDate = new DateTime(2022, 03, 22),
+                            ScoreReportDate = new DateTime(2022, 03, 29),
+                            Exam = exam9,
+                            CandidateScore = exam9.FinalScore,
+                            TopicDescription = "C# Certificate",
+                            NumberOfAwardedMarks = 1,
+                            NumberOfPossibleMakrs = 0
+                        });
+
+
+                        // Succeeded Exam with Certificate
+                        var exam10 = new Exam(context.Candidates.Where(c => c.CandidateId == 4).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "SDS Foundation").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 13,
+                                MarkOfTopic2 = 20,
+                                MarkOfTopic3 = 20,
+                                MarkOfTopic4 = 30
+                            });
+
+                        context.Certificates.Add(new Certificate
+                        {
+                            CertificateType = exam10.CertificateType,
+                            CandidateId = context.Candidates.Where(c => c.CandidateId == 4).SingleOrDefault(),
+                            AssessmentTestCode = "SDS 458839FND",
+                            ExaminationDate = new DateTime(2015, 07, 12),
+                            ScoreReportDate = new DateTime(2015, 07, 20),
+                            Exam = exam10,
+                            CandidateScore = exam10.FinalScore,
+                            TopicDescription = "SDS Foundation Certificate",
+                            NumberOfAwardedMarks = 0,
+                            NumberOfPossibleMakrs = 0
+                        });
+
+
+                        // A Failed Exam that did not lead to a Certificate
+                        var exam11 = new Exam(context.Candidates.Where(c => c.CandidateId == 4).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "SDS Advanced").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 12,
+                                MarkOfTopic2 = 5,
+                                MarkOfTopic3 = 15,
+                                MarkOfTopic4 = 30
+                            });
+                        context.Exams.Add(exam11);
+
+
+                        // Succeeded Exam with Certificate
+                        var exam12 = new Exam(context.Candidates.Where(c => c.CandidateId == 1).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "SDS Foundation").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 20,
+                                MarkOfTopic2 = 10,
+                                MarkOfTopic3 = 20,
+                                MarkOfTopic4 = 20
+                            });
+
+                        context.Certificates.Add(new Certificate
+                        {
+                            CertificateType = exam12.CertificateType,
+                            CandidateId = context.Candidates.Where(c => c.CandidateId == 1).SingleOrDefault(),
+                            AssessmentTestCode = "SDS 458839FND",
+                            ExaminationDate = new DateTime(2022, 02, 10),
+                            ScoreReportDate = new DateTime(2022, 02, 15),
+                            Exam = exam12,
+                            CandidateScore = exam12.FinalScore,
+                            TopicDescription = "SDS Foundation Certificate",
+                            NumberOfAwardedMarks = 0,
+                            NumberOfPossibleMakrs = 0
+                        });
+
+
+                        // Succeeded Exam with Certificate
+                        var exam13 = new Exam(context.Candidates.Where(c => c.CandidateId == 1).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "Python").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 20,
+                                MarkOfTopic2 = 20,
+                                MarkOfTopic3 = 15,
+                                MarkOfTopic4 = 25
+                            });
+
+                        context.Certificates.Add(new Certificate
+                        {
+                            CertificateType = exam13.CertificateType,
+                            CandidateId = context.Candidates.Where(c => c.CandidateId == 1).SingleOrDefault(),
+                            AssessmentTestCode = "PYS 993211",
+                            ExaminationDate = new DateTime(2020, 01, 10),
+                            ScoreReportDate = new DateTime(2020, 01, 13),
+                            Exam = exam13,
+                            CandidateScore = exam13.FinalScore,
+                            TopicDescription = "Python Certificate",
+                            NumberOfAwardedMarks = 0,
+                            NumberOfPossibleMakrs = 0
+                        });
+
+
+                        // Succeeded Exam with Certificate
+                        var exam14 = new Exam(context.Candidates.Where(c => c.CandidateId == 9).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "Java").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 20,
+                                MarkOfTopic2 = 18,
+                                MarkOfTopic3 = 20,
+                                MarkOfTopic4 = 30
+                            });
+
+                        context.Certificates.Add(new Certificate
+                        {
+                            CertificateType = exam14.CertificateType,
+                            CandidateId = context.Candidates.Where(c => c.CandidateId == 9).SingleOrDefault(),
+                            AssessmentTestCode = "JVW 889230",
+                            ExaminationDate = new DateTime(2014, 05, 13),
+                            ScoreReportDate = new DateTime(2014, 05, 18),
+                            Exam = exam14,
+                            CandidateScore = exam14.FinalScore,
+                            TopicDescription = "Java Certificate",
+                            NumberOfAwardedMarks = 1,
+                            NumberOfPossibleMakrs = 0
+                        });
+
+
+                        // Succeeded Exam with Certificate
+                        var exam15 = new Exam(context.Candidates.Where(c => c.CandidateId == 5).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "Python").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 20,
+                                MarkOfTopic2 = 20,
+                                MarkOfTopic3 = 30,
+                                MarkOfTopic4 = 20
+                            });
+
+                        context.Certificates.Add(new Certificate
+                        {
+                            CertificateType = exam15.CertificateType,
+                            CandidateId = context.Candidates.Where(c => c.CandidateId == 5).SingleOrDefault(),
+                            AssessmentTestCode = "PYT 998435",
+                            ExaminationDate = new DateTime(2018, 04, 04),
+                            ScoreReportDate = new DateTime(2018, 04, 09),
+                            Exam = exam15,
+                            CandidateScore = exam15.FinalScore,
+                            TopicDescription = "Python Certificate",
+                            NumberOfAwardedMarks = 1,
+                            NumberOfPossibleMakrs = 0
+                        });
+
+
+                        // A Failed Exam that did not lead to a Certificate
+                        var exam16 = new Exam(context.Candidates.Where(c => c.CandidateId == 7).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "Python").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 12,
+                                MarkOfTopic2 = 10,
+                                MarkOfTopic3 = 20,
+                                MarkOfTopic4 = 10
+                            });
+                        context.Exams.Add(exam16);
+
+
+                        // A Failed Exam that did not lead to a Certificate
+                        var exam17 = new Exam(context.Candidates.Where(c => c.CandidateId == 7).SingleOrDefault(),
+                            context.CertificateTypes.Where(c => c.Type == "C#").SingleOrDefault(),
+                            new MarkPerTopic()
+                            {
+                                MarkOfTopic1 = 10,
+                                MarkOfTopic2 = 5,
+                                MarkOfTopic3 = 25,
+                                MarkOfTopic4 = 20
+                            });
+                        context.Exams.Add(exam17);
 
                         context.SaveChanges();
                     }
                 }
-
-
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(6, 8, 'SDS 456834FND', '2018-03-11', '2018-03-15', 92, 100, '100%', 1, 'SDS Foundation', 1, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 20, 20, 30, 22)
-                //GO
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(7, 8, 'SDS 338755ADV', '2018-05-17', '2018-05-22', 87, 100, '100%', 1, 'SDS Advanced', 1, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 20, 15, 30, 22)
-                //GO
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(4, 10, 'PYH 463377', '2016-11-17', '2016-11-22', 50, 100, '100%', 2, 'Python Certificate', 0, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 10, 15, 15, 10)
-                //GO
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(2, 10, 'CSJ 339022', '2022-03-22', '2022-03-29', 98, 100, '100%', 1, 'C# Certificate', 1, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 20, 18, 30, 30)
-                //GO
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(6, 4, 'SDS 458839FND', '2015-07-12', '2015-07-20', 83, 100, '100%', 1, 'SDS Foundation', 0, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 13, 20, 20, 30)
-                //GO
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(7, 4, 'SDS 994633ADV', '2015-09-09', '2015-09-15', 62, 100, '100%', 2, 'SDS Advanced', 0, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 12, 5, 15, 30)
-                //GO
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(6, 1, 'SDS 334490FND', '2022-02-10', '2022-02-15', 70, 100, '100%', 1, 'SDS Foundation', 0, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 20, 10, 20, 20)
-                //GO
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(4, 1, 'PYS 993211', '2020-01-10', '2020-01-13', 80, 100, '100%', 1, 'Python Certificate', 0, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 20, 20, 15, 25)
-                //GO
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(1, 9, 'JVW 889230', '2014-05-13', '2014-05-18', 88, 100, '100%', 1, 'Java Certificate', 1, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 20, 18, 20, 30)
-                //GO
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(4, 5, 'PYT 998435', '2018-04-04', '2018-04-09', 90, 100, '100%', 1, 'Python Certificate', 1, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 20, 20, 30, 20)
-                //GO
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(4, 7, 'PYP 567744', '2016-11-11', '2016-11-17', 52, 100, '100%', 2, 'Python Certificate', 0, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 12, 10, 20, 10)
-                //GO
-
-
-                //INSERT INTO Certificates(TypeOfCertificate, CandidateId, AssesmentTestCode, ExaminationDate, ScoreReportDate, CandidateScore,
-                //                          MaximumScore, PercentageScore, AssesmentResult, TopicDescription, NumberOfAwardedMarks, NumberOfPossibleMarks)
-                //VALUES(2, 7, 'CSP 448991', '2019-02-22', '2019-02-26', 60, 100, '100%', 2, 'C# Certificate', 0, 0)
-                //GO
-
-                //INSERT INTO MarksPerTopics(CertificateId, Topic1, Topic2, Topic3, Topic4)
-                //VALUES(SCOPE_IDENTITY(), 10, 5, 25, 20)
-                //GO
                 catch (Exception exception)
                 {
                     Console.WriteLine(exception.Message);
-                    Console.WriteLine("Something not working with AddCertificates Method!");
+                    Console.WriteLine("Something not working with AddExamsAndCertificates Method!");
                 }
             }
         }
