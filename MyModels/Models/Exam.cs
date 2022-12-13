@@ -39,5 +39,11 @@ namespace MyModels.Models
                 AssessmentTestResult = "Fail";
             }
         }
+
+        public override string ToString()
+        {
+            return $"ExamId: {ExamsId}\nCertificateType: {CertificateType.Type}\nCadidateId: {CandidateId.CandidateId}\n" +
+                $"MarksPerTopicId: {MarkPerTopic.Id}\nFinalScore: {FinalScore}\nAssessmentTestResult: {AssessmentTestResult}";
+        }
     }
 }

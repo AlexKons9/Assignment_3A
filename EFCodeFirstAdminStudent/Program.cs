@@ -1,10 +1,13 @@
 ﻿using EFCodeFirstAdminStudent.Data.Services;
+using EFCodeFirstAdminStudent.Services;
 using MyModels.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace EFCodeFirstAdminStudent
 {
@@ -12,12 +15,14 @@ namespace EFCodeFirstAdminStudent
     {
         static void Main(string[] args)
         {
-            AppDbContext appDbContext = new AppDbContext();
-            appDbContext.Candidates.Add(new Candidate{
-                FirstName = "Alekos",
-                LastName = "Papas",
-                Email = "ale@papas.com"
-            });
+            AdminService adminService = new AdminService();
+            //adminService.CreateCandidate();
+            //adminService.UpdateCandidate();
+            //adminService.ReadCandidate();
+            //adminService.RemoveCandidate();
+
+            adminService.ReadCandidateExamsResults();
+            
         }
     }
 }

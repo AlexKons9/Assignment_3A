@@ -120,8 +120,6 @@
             {
                 try
                 {
-
-
                     if (context.Candidates.Where(id => id.CandidateId == 1).Count() == 0 &&
                         context.Candidates.Where(id => id.CandidateId == 2).Count() == 0 &&
                         context.Candidates.Where(id => id.CandidateId == 3).Count() == 0 &&
@@ -156,8 +154,8 @@
                             Province = "Attiki",
                             City = "Athens",
                             PostalCode = "12345",
-                            LandlineNumber = "+306912345678",
-                            MobileNumber = "+302109090999"
+                            LandlineNumber = "+302109090999",
+                            MobileNumber = "+306912345678"
                         });
                         context.Candidates.Add(new Candidate
                         {
@@ -176,8 +174,8 @@
                             Province = "Thessaloniki",
                             City = "Kalamaria",
                             PostalCode = "12345",
-                            LandlineNumber = "+306912345678",
-                            MobileNumber = "+30231009090"
+                            LandlineNumber = "+30231009090",
+                            MobileNumber = "+306912345678"
                         });
                         context.Candidates.Add(new Candidate
                         {
@@ -196,8 +194,8 @@
                             Province = "Attiki",
                             City = "Athens",
                             PostalCode = "54321",
-                            LandlineNumber = "+306945454545",
-                            MobileNumber = "+302108888888"
+                            LandlineNumber = "+302108888888",
+                            MobileNumber = "+306945454545"
                         });
                         context.Candidates.Add(new Candidate
                         {
@@ -217,8 +215,8 @@
                             Province = "Attiki",
                             City = "Athens",
                             PostalCode = "23456",
-                            LandlineNumber = "+306989898809",
-                            MobileNumber = "+3021000000"
+                            LandlineNumber = "+3021000000",
+                            MobileNumber = "+306989898809"
                         });
                         context.Candidates.Add(new Candidate
                         {
@@ -238,8 +236,8 @@
                             Province = "Axaia",
                             City = "Patra",
                             PostalCode = "09899",
-                            LandlineNumber = "+306932323232",
-                            MobileNumber = "+302908567893"
+                            LandlineNumber = "+302908567893",
+                            MobileNumber = "+306932323232"
                         });
                         context.Candidates.Add(new Candidate
                         {
@@ -258,8 +256,8 @@
                             Province = "Attiki",
                             City = "Zografou",
                             PostalCode = "33321",
-                            LandlineNumber = "+306900806754",
-                            MobileNumber = "+3021045678677"
+                            LandlineNumber = "+3021045678677",
+                            MobileNumber = "+306900806754"
                         });
                         context.Candidates.Add(new Candidate
                         {
@@ -279,8 +277,8 @@
                             Province = "Attiki",
                             City = "Zografou",
                             PostalCode = "67678",
-                            LandlineNumber = "+306978463300",
-                            MobileNumber = "+30210983425"
+                            LandlineNumber = "+30210983425",
+                            MobileNumber = "+306978463300"
                         });
                         context.Candidates.Add(new Candidate
                         {
@@ -299,8 +297,8 @@
                             Province = "Attiki",
                             City = "Ano Liosia",
                             PostalCode = "34546",
-                            LandlineNumber = "+306945673211",
-                            MobileNumber = "+30219080777"
+                            LandlineNumber = "+30219080777",
+                            MobileNumber = "+306945673211"
                         });
                         context.Candidates.Add(new Candidate
                         {
@@ -320,8 +318,8 @@
                             Province = "Axaia",
                             City = "Kalamata",
                             PostalCode = "669077",
-                            LandlineNumber = "+306967458933",
-                            MobileNumber = "+302107878666"
+                            LandlineNumber = "+302107878666",
+                            MobileNumber = "+306967458933"
                         });
                         context.Candidates.Add(new Candidate
                         {
@@ -341,8 +339,8 @@
                             Province = "Attiki",
                             City = "Drosia",
                             PostalCode = "99887",
-                            LandlineNumber = "+306934556788",
-                            MobileNumber = "+302108877669"
+                            LandlineNumber = "+302108877669",
+                            MobileNumber = "+306934556788"
                         });
                         context.SaveChanges();
                     }

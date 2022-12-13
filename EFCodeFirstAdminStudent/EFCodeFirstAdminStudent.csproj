@@ -58,6 +58,8 @@
       <DependentUpon>202212112017060_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Services\AdminService.cs" />
+    <Compile Include="Services\CandidateService.cs" />
     <Compile Include="Services\Data\AppDbContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

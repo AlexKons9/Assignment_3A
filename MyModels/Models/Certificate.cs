@@ -30,5 +30,12 @@ namespace MyModels.Models
         public string TopicDescription { get; set; }
         public int NumberOfAwardedMarks { get; set; }
         public int NumberOfPossibleMakrs { get; set; }
+
+        public override string ToString()
+        {
+            return $"CertificateId: {CertificateId}\nCertificateType: {CertificateType.Type}\nCandidateId: {CandidateId}\nAssessmentTestCode: {AssessmentTestCode}\n\n" +
+                   $"ExaminationDate: {ExaminationDate}\nScoreReportDate: {ScoreReportDate}\nCandidateScore: {CandidateScore}\nMaximumScore: {MaximumScore}\n\n" +
+                   $"PercentageScore: {PercentageScore}\nAssessmentTestResult: {Exam.AssessmentTestResult}\nNumberOfAwarderMarks: {NumberOfAwardedMarks}\nNumberOfPossibleMarks: {NumberOfAwardedMarks}";
+        }
     }
 }

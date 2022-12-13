@@ -33,5 +33,12 @@ namespace MyModels.Models
         public string LandlineNumber { get; set; }
         public string MobileNumber { get; set; }
 
+
+        public override string ToString()
+        {
+            return $"Id: {CandidateId}\nFirstName: {FirstName}\nMiddleName: {MiddleName}\nLastName: {LastName}\nGender: {Gender.GenderType}\nNativeLanguage: {NativeLanguage}\nBirthDate: {BirthDate}\nPhotoIdType: {PhotoIdType.Type}" +
+                $"\nPhotoIdNumber: {PhotoIdNumber}\nPhotoIssueDate: {PhotoIssueDate}\nEmail: {Email}\nAddressLine: {AddressLine}\nAddressLine2: {AddressLine2}\nCountryOfResidence: {CountryOfResidence}" +
+                $"\nProvince: {Province}\nCity: {City}\nPostalCode: {PostalCode}\nLandlineNumbe: {LandlineNumber}\nMobileNumber: {MobileNumber}";
+        }
     }
 }
